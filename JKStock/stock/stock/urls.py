@@ -25,5 +25,5 @@ urlpatterns = [
     path('',        TemplateView.as_view(template_name="index.html")),
     path('apis/',   schema_view),
     path('admin/',  admin.site.urls),
-    path('stock/',  include('reportStock.urls')),
+    path('stock/<int:stock_id>/',  include('reportStock.urls')),
 ]
